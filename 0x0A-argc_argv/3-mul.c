@@ -2,13 +2,13 @@
 #include "main.h"
 
 /**
- * _atol - converts a string to an integer
+ * _atoi - converts a string to an integer
  * @s: strings to be converted
  *
  * Return: the int converted from the string
  */
 
-int _atol(char *s)
+int _atoi(char *s)
 {
 	int i, d, n, len, f, digit;
 
@@ -20,6 +20,7 @@ int _atol(char *s)
 	digit = 0;
 
 	while (s[len] != '\0')
+		len++
 
 	while (i < len && f == 0)
 	{
@@ -63,8 +64,8 @@ int main(int argc, char *argv[])
 		return (1);
 	}
 
-	num1 = _atol(argv[1]);
-	num2 = _atol(argv[2]);
+	num1 = _atoi(argv[1]);
+	num2 = _atoi(argv[2]);
 	result = num1 * num2;
 
 	printf("%d\n", result);
