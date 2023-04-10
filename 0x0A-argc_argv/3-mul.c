@@ -19,9 +19,11 @@ int _atol(char *s)
 	f = 0;
 	digit = 0;
 
+	while (s[len] != '\0')
+
 	while (i < len && f == 0)
 	{
-		if (s[i] == ' ')
+		if (s[i] == '_')
 			++d;
 		if (s[i] >= '0' && s[i] <= '9')
 		{
