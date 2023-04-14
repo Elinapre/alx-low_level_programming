@@ -3,22 +3,27 @@
 #include <stdio.h>
 
 /**
- * main - prints the multiplication of two integers
- * @argc: argument count
- * @argv: argument vector
- * Return: 0 if true, 1 if false
+ * main - print sum of 2 numbers.
+ * @argc: number of commandline argument.
+ * @argv: pointer to an array of command line arguments.
+ *
+ * Return: 0 (success).
  */
 
 int main(int argc, char *argv[])
 {
-int a, b;
-if (argc == 1)
-{
-a = atoi(argv[1]);
-b = atoi(argv[2]);
-printf("%d\n", a *b);
-return (0);
-}
-printf("Error\n");
-return (1);
+	int sum;
+
+	if (argc == 3)
+	{
+		sum = atoi(argv[1]) * atoi(argv[2]);
+		printf("%d\n", sum);
+	}
+	else
+	{
+		printf("Error\n");
+		return (1);
+	}
+
+	return (0);
 }
